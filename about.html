@@ -13,7 +13,53 @@
 </head>
 <body>
   <!-- ヘッダーここから -->
-  <div id="header"></div>
+  <header>   
+    <div>
+      <a class="logo-header" href="index.html">
+        <img class="shop-logo-header" src="assets/img/logo-header.png" alt="店名ロゴ">
+        <div>
+          <p class="logo-text">シニアライフをコーディネートする</p>
+          <h2 class="logo-text">横浜リアルライフパートナーズ</h2>  
+        </div>
+      </a>
+    </div>
+    <nav class="nav-pc">
+      <ul>
+        <li><a href="blog.html">代表のつぶやき</a></li>
+        <li><a href="index.html#service-section">サービス</a></li>
+        <li><a href="contact.html">ご相談・お申し込み</a></li>
+        <li><a href="about.html">事業所概要</a></li>
+      </ul>
+    </nav>  
+    <!-- スマホ用ハンバーガーメニューボタン -->
+    <button id="bt-hamburger" onclick="document.getElementById('nav-sp').style.display = 'block'">
+      <img src="assets/img/bt-hamburger.png" alt="">
+    </button>
+  
+    <!-- スマホ用ナビゲーション -->
+    <div id="nav-sp">
+      <div class="nav-sp-header">
+        <a class="logo-header" href="index.html">
+          <img class="shop-logo-header" src="assets/img/logo-header.png" alt="店名ロゴ">
+          <div>
+            <p class="logo-text">シニアライフをコーディネートする</p>
+            <h2 class="logo-text">横浜リアルライフパートナーズ</h2>  
+          </div>
+        </a>
+        <button id="close" onclick="document.getElementById('nav-sp').style.display = 'none'">
+          <img src="assets/img/bt-close.png" alt="ナビゲーションを閉じる">
+        </button>  
+      </div>
+      <nav>
+        <ul>  
+           <li><a class="menu-sp" href="blog.html" onclick="document.getElementById('nav-sp').style.display = 'none'">代表のつぶやき</a></li>
+           <li><a class="menu-sp" href="index.html#service-section" onclick="document.getElementById('nav-sp').style.display = 'none'">サービス</a></li>    
+           <li><a class="menu-sp" href="contact.html" onclick="document.getElementById('nav-sp').style.display = 'none'">ご相談・お申し込み</a></li>     
+           <li><a class="menu-sp" id="menu-sp-bottom" href="about.html" onclick="document.getElementById('nav-sp').style.display = 'none'">事業所概要</a></li>   
+        </ul>
+      </nav>
+    </div>
+   </header>   
   <!-- ヘッダーここまで -->
 
 <main>
@@ -145,7 +191,63 @@
 </main>
 
   <!-- フッターここから -->
-  <div id="footer"></div>
+  <footer>
+    <div class="footer-elements">
+  
+      <div class="footer-left">
+        <img src="assets/img/logo-footer.png" alt="店名ロゴ">
+        <h4 class="footer-text">
+          〒224-0033 <br>
+          神奈川県横浜市都筑区茅ケ崎東1-1-6-911 <br>
+          TEL.090-6315-4955 <br>
+          FAX.045-944-3161
+        </h4>
+        <img src="assets/img/footer_logoarea.png" alt="">
+        <h4 class="footer-text">
+          一般社団法人シニアウェルスライフ協会加盟 <br>
+          一般社団法人福祉移送ネットワークアイラス加盟 <br>
+          国土交通省関東運輸局認可 <br>
+          横浜市消防局認定 患者等搬送事業者
+        </h4>  
+      </div>
+  
+      <div class="footer-center">
+        <nav>
+          <h3><a class="footer-text nav-list" href="blog.html">代表のつぶやき<span class="arrow">></span></a></h3>
+          <h3><a class="footer-text nav-list" href="index.html#service-section">サービス<span class="arrow">></span></a></h3>
+          <h3><a class="footer-text nav-list" href="contact.html">ご相談・お申し込み<span class="arrow">></span></a></h3>
+          <h3><a class="footer-text nav-list" href="about.html">事業所概要<span class="arrow">></span></a></h3>
+          <h3><a class="footer-text nav-list" href="privacy-policy.html">プライバシーポリシー<span class="arrow">></span></a></h3>  
+        </nav>
+        <div class="banner-elements">
+          <img src="assets/img/top/banner_ailus.png" alt="アイラスバナー">
+          <img src="assets/img/top/banner-care-taxi.png" alt="介護タクシー案内所バナー">  
+        </div>
+      </div>
+  
+      <!-- facebook -->
+      <div class="footer-right">
+        <script async defer crossorigin="anonymous"
+         src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v19.0" nonce="abc123">
+       </script>
+      
+       <div class="fb-page"
+         data-href="https://www.facebook.com/reallife.p?ref=embed_page"
+         data-tabs="timeline"
+         data-width=""
+         data-height=""
+         data-small-header="false"
+         data-adapt-container-width="true"
+         data-hide-cover="false"
+         data-show-facepile="true">
+         <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+           <a href="https://www.facebook.com/facebook">Facebook</a>
+         </blockquote>
+       </div>
+      </div>
+    </div>
+    <h4 id="copyright">&copy;2025 横浜リアルライフパートナーズ All Rights Reserved.</h4>
+  </footer>
   <!-- フッターここまで -->     
 
   <!-- jQueryをCDN経由で読み込む -->
