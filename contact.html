@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>横浜リアルライフパートナーズ</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="シニアライフをコーディネートする横浜リアルライフパートナーズ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="assets/css/reset.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="assets/css/style.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <!-- ヘッダーここから -->
+  <div id="header"></div>
+  <!-- ヘッダーここまで -->
+
+<main>
+  <section class="first-section">
+    <div class="big-title">
+      <h2>ご相談・お申し込み</h2>
+      <img class="separation-line" src="assets/img/separation-line.png" alt="セパレートライン">
+    </div>
+    <img class="counseling-photo" src="assets/img/contact/contact-photo-01.png" alt="会議中の画像">
+    <h3 class="small-title">下記内容をご入力のうえ、送信してください。入力項目はすべて必須となっています。3日以内に担当より折り返しご連絡いたします。折り返しの連絡がない場合は、お手数ですが 0800-100-352（7:00～20:00）までお電話ください。</h3>
+    <h3 class="important-text">3日以内にケアサポート753（介護タクシー）のご利用をご希望の方は、必ずお電話で空き状況をご確認いただき、予約をお取りください。</h3>
+  </section>
+
+  <section class="second-section">
+    <form class="form">
+      <!-- 「お名前」 -->
+      <div class="form-name">
+        <div class="contact-heading">
+          <label class="contact-label">お名前<span class="contact-span">必須</span></label>
+        </div>
+        <div>
+          <input id="name" type="text" name="name" class="contact-textbox">
+        </div>
+      </div>
+      <!-- フリガナ -->
+      <div class="form-furigana">
+        <div class="contact-heading">
+          <label class="contact-label">フリガナ<span class="contact-span">必須</span></label>
+        </div>
+        <div>
+          <input id="furigana" type="text" name="furigana" class="contact-textbox">
+        </div>
+      </div> 
+      <!-- メールアドレス -->
+      <div class="form-email">
+        <div class="contact-heading">
+          <label class="contact-label">メールアドレス<span class="contact-span">必須</span></label>
+        </div>
+        <div>
+          <input id="email" type="text" name="email" class="contact-textbox">
+        </div>
+      </div>
+     <!-- 電話番号 -->
+     <div class="form-tel">
+      <div class="contact-heading">
+        <label class="contact-label">電話番号</label>
+      </div>
+      <div>
+        <input id="tel" type="text" name="tel" class="contact-textbox">
+      </div>
+     </div>
+     <!-- お問い合わせ内容 -->
+     <div class="form-message">
+      <div class="contact-heading">
+        <label class="contact-label">お問い合わせ内容<span class="contact-span">必須</span></label>
+      </div>
+      <div>
+        <textarea id="message" class="contact-textarea"name="message"></textarea>
+      </div>     
+     </div>
+     
+     <!-- 「送信する」ボタン -->
+     <input id="submit" type="submit" name="submit" value="送信する">
+      
+    </form>
+  </section>
+</main>
+
+  <!-- フッターここから -->
+  <div id="footer"></div>
+  <!-- フッターここまで -->     
+
+  <!-- jQueryをCDN経由で読み込む -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!-- JSファイルを読み込む -->
+  <script src="assets/js/script.js"></script>
+  
+</body>
+</html>
