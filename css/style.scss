@@ -1,0 +1,1199 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "source-han-serif-japanese", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+  margin: 0 auto 0 auto;
+  background-color: #F2E7D0;
+}
+
+h1{
+  font-size: 32px;
+  color: #333333;
+}
+
+h2{
+ font-size: 28px;
+ color: #333333;
+
+ //  スマホスタイル
+ @media screen and (max-width: 768px){
+  font-size: 20px;
+ }
+}
+
+h3{
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+h4{
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+p{
+  font-size: 12px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+// ヘッダーここから
+header{
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #7F4F2A;
+  color: #D4D4D4;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+
+  // スマホレイアウト
+  @media screen and (max-width: 768px){
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+  }
+}
+
+// ロゴ
+.logo-header{
+  display: flex;
+}
+.logo-text{
+  margin-top: 5px;
+  color: #D4D4D4;
+}
+
+.shop-logo-header{
+  display: block;
+}
+
+// ナビゲーション
+.nav-pc ul {
+  display: flex;
+  gap: 1.5rem; // li同士の間に余白をつけるとキレイ！
+  list-style: none; // ドットを消す
+  padding-top: 25px;
+  margin: 0;
+
+  // スマホスタイルのときには非表示にする
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+// スマホ用ナビゲーション
+#nav-sp{
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+  .nav-sp-header{
+    display: flex;
+    background-color: #7F4F2A;
+  }
+
+  // 閉じるボタン
+  #close{
+    padding-left: 10%;     
+  }
+
+  #nav-sp{
+    background-color: #7F4F2A;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    display: none;
+    z-index: 99;
+
+    > nav >ul >li{
+      padding: 20px 35.6% 20px 7.1%;
+      font-size: 24px;
+      border-top-width: 1px;
+      border-top-color: #F2E7D0;
+      border-top-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: #F2E7D0;
+      border-bottom-style: solid;
+      >a{
+        color: #D4D4D4;
+      }
+ 
+      a:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .menu-sp{
+    color: #333333;
+    font-size: 24px;  
+  }
+}
+
+// ハンバーガーメニュー
+#bt-hamburger{
+  // PCスタイルのときには非表示にする
+  display: none;
+  @media screen and (max-width: 768px){
+    display: block;
+    padding-top: 10px;    
+  }
+}
+// ヘッダーここまで
+
+// index.htmlここから
+// トップ画像ここから
+.top-section{
+  position: relative;
+  padding-left: 15.7%;
+  padding-right: 15.7%;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    padding-top: 53px;
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+.title{
+  position: absolute;
+  top: 500px;
+  left: 355px;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    font-size: 16px;
+    top: 200px;
+    left: 355px;  
+  }
+}
+
+.top-photo{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+// トップ画像ここまで
+
+
+// 代表のつぶやきここから
+.blog-section{
+  background-color: #CDEDE4;
+  margin-top: 115px;
+  margin-left: 15.7%;
+  margin-right: 15.7%;
+  padding: 20px 1.5%;
+
+  // スマホスタイル
+  margin-left: 4.7%;
+  margin-right: 4.7%;
+}
+
+// 全体レイアウト
+.top-article-elements {
+  display: flex;
+  column-gap: 7%; // 間隔つけるとキレイ
+  flex-wrap: wrap; // スマホ対応で折り返しもさせるなら
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    display: block;
+    column-gap: 0; 
+  }
+}
+
+// セパレートライン
+.separation-line{
+  width: 100%;
+}
+
+// 各記事ごとのレイアウト
+.top-article{
+  margin-top: 25px;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    margin-top: 50px;
+    margin-left: 10%;  
+  }
+}
+
+// 日付とカテゴリー名のレイアウト
+.date-and-category{
+  display: flex;
+}
+
+// カテゴリー名のレイアウト
+.category-name{
+  background-color: #DD7600;
+  color: #D4D4D4;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+// タイトルのレイアウト
+.article-title{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+// 「記事一覧」ボタン
+.bt-more-blog{
+  text-align: center;
+  >button{
+   background-color: #9B1B30;
+   color: #D4D4D4;
+   padding: 20px 35px;
+   border-radius: 10px;
+   margin: 50px auto;
+  }
+}
+// 代表のつぶやきここまで
+
+
+// サービスここから
+#service-section{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 15.7%;
+  padding-right: 15.7%;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+// 全体レイアウト
+.service-elements{
+  display: flex;
+  column-gap: 60px;
+  margin-top: 50px;
+
+  // スマホスタイルのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;
+  }
+}
+
+// シニアライフ向上委員会のレイアウト
+.service-elements-01{
+  width: 50%;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    width: 100%;    
+  }
+}
+
+// ケアサポート753のレイアウト
+.service-elements-02{
+  width: 50%;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    width: 100%; 
+    margin-top: 50px;   
+  }
+}
+
+.service-photo{
+  width: 100%;
+  height: auto;
+}
+
+.service-title{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+// ボタンレイアウト
+.bt-more-service{
+  width: 100%;
+  background-color: #9B1B30;
+  color: #D4D4D4;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 35px;
+}
+// サービスここまで
+
+
+// お気軽にご相談ください・ここから
+.contact-section{
+  position: relative;
+  padding-left: 15.7%;
+  padding-right: 15.7%;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+
+  >img{
+    width: 100%;
+  }
+}
+
+// 画像・PC用
+.contact-photo{
+  // スマホスタイルのときには非表示にする
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+// 画像・SP用
+.contact-photo-sp{
+  display: none;
+  @media screen and (max-width: 768px){
+    display: block;
+  }
+}
+
+.bt-more-contact{
+  position: absolute;
+  top: 350px;
+  left: 43%;
+  background-color: #9B1B30;
+  color: #D4D4D4;
+  border-radius: 10px;
+  padding: 20px 35px;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    top: 250px;
+    left: 23%;    
+  }
+}
+// お気軽にご相談ください・ここまで
+
+
+// 横浜リアルライフパートナーズの想いここから
+.message-section{
+  padding-top: 100px;
+  padding-left: 15.7%;
+  padding-right: 15.7%;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+// 全体レイアウト
+.message-and-video{
+  display: flex;
+  column-gap: 35px;
+
+  // スマホスタイルのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;    
+  }
+}
+
+.message-element{
+  width: 50%;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
+}
+.video-element{
+  display: flex;
+  justify-content: center;   // 水平方向の中央揃え
+  align-items: center;       // 垂直方向の中央揃え
+  width: 50%;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  >video{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; // レスポンシブにしたい場合
+    height: auto;
+  }
+}
+
+// 代表：平峯　敬也（ひらみね　たかや）
+.name-title{
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+// 横浜リアルライフパートナーズの想いここまで
+
+
+// 事業所概要ここから
+.about-section{
+ padding: 100px 15.7%; 
+
+ //  スマホスタイル
+ @media screen and (max-width: 768px){
+   padding-left: 4.7%;
+   padding-right: 4.7%;
+ }
+}
+
+#company-table{
+  width: 100%;
+  margin-top: 50px;
+}
+
+// .tableheader-first{
+//   border-top-color: rgba(51, 51, 51, 0.5); // #333333 は RGBで (51, 51, 51);
+//   border-top-width: 1px;
+//   border-top-style: solid;
+// }
+
+// .cell-first{
+//   border-top-color: rgba(51, 51, 51, 0.5); // #333333 は RGBで (51, 51, 51);
+//   border-top-width: 1px;
+//   border-top-style: solid;
+// }
+
+.tableheader{
+  border-bottom-color: rgba(51, 51, 51, 0.5); // #333333 は RGBで (51, 51, 51);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 100px;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    padding-right: 50px;
+
+  }
+  
+}
+
+.cell{
+  border-bottom-color: rgba(51, 51, 51, 0.5); // #333333 は RGBで (51, 51, 51);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+// もっとみるボタン
+.bt-more-about{
+  display: block;
+  margin: 50px auto;
+  background-color: #9B1B30;
+  color: #D4D4D4;
+  border-radius: 10px;
+  padding: 20px 35px;
+}
+// 事業所概要ここまで
+// index.htmlここまで
+
+
+// フッターここから
+footer{
+  background-color: #0C295C;
+  color: #ffffff;
+}
+
+// 全体レイアウト
+.footer-elements{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  // スマホスタイルのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+  }
+}
+
+.footer-text{
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.footer-left, .footer-center{
+  margin-top: 25px;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    padding-top: 50px;
+  }
+}
+
+.footer-right{
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    padding-left: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.nav-list{
+  margin-bottom: 50px;
+}
+
+// ＞のレイアウト
+.arrow{
+  margin-left: 20px;
+}
+
+.banner-elements{
+  margin-top: 50px;
+
+  // スマホスタイル
+  @media screen and (max-width: 768px){
+    padding-left: 5%;
+  }
+}
+
+.fb-page{
+  margin-top: 25px;
+  width: 300px;
+}
+
+#copyright{
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 50px;
+}
+// フッターここまで
+
+
+// 個別ページ・共通ここから
+.first-section, .second-section, .third-section, .fourth-section, .fifth-section{
+  padding-left: 15.7%;
+  padding-right: 15.7%;
+  padding-bottom: 100px;
+
+  // スマホレイアウト
+  @media screen and (max-width: 768px){
+    padding-left: 4.7%;
+    padding-right: 4.7%;
+    
+  }
+}
+
+.first-section{
+  // スマホレイアウト
+  @media screen and (max-width: 768px){
+    padding-top: 65px;
+  }
+}
+
+// タイトル
+.big-title{
+  margin-top: 50px;
+}
+.small-title{
+  margin-top: 20px;
+}
+// 個別ページ・共通ここまで
+
+
+// blog.htmlここから
+// 全体レイアウト
+.first-article-elements, .second-article-elements{
+  display: flex;
+  column-gap: 5%;
+
+  // スマホレイアウトのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;
+    
+  }
+}
+// blog.htmlここまで
+
+
+// service-senior-life.htmlここから
+
+// シニアライフ向上委員会とはここから
+//全体レイアウト
+.about-service{
+  background-color: #CDEDE4;
+  border-radius: 10px;
+  padding: 35px;
+  margin-top: 35px;
+  margin-bottom: 100px;
+}
+
+// 代表の平峯があなたのお話を伺い、
+.about-service-text{
+  text-align: center;
+}
+
+// 顔写真＋説明文
+.photo-and-explanation{
+  display: flex;
+  padding-top: 35px;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  // スマホレイアウトのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;
+  }
+
+  >img{
+    height: 100px;
+    margin-right: 65px;
+
+    // スマホレイアウト
+    @media screen and (max-width: 768px){
+      height: 150px;
+      margin-left: 20%;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+// 画像・相談〜解決までの流れ
+// PC用
+.flow-photo{
+  width: 100%;
+
+  // スマホレイアウトのときには非表示にする
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+// スマホ用
+.flow-photo-sp{
+  display: none;
+  @media screen and (max-width: 768px){
+    display: block;
+    width: 100%;
+  }
+}
+// シニアライフ向上委員会とはここまで
+
+// 「こんな専門家をご紹介します」
+// 画像・専門委員の紹介
+// PC用
+.expert-profile{
+  width: 100%;
+  margin-top: 50px;
+
+  // スマホレイアウトのときには非表示にする
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+// スマホ用
+.expert-profile-sp{
+  display: none;
+
+  @media screen and (max-width: 768px){
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+// 「これからの準備はできていますか？」
+// 画像・シニアのお悩み
+// PC用
+.senior-worries{
+  width: 100%;
+  margin-top: 50px;
+
+  // スマホレイアウトのときには非表示にする
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+// スマホ用
+.senior-worries-sp{
+  display: none;
+
+  @media screen and (max-width: 768px){
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+// 「どんなことでもお気軽にご相談ください！」
+// 全体レイアウト
+.counseling-service{
+  display: flex;
+  column-gap: 10%;
+  margin-top: 50px;
+
+  // スマホレイアウトのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;
+  }
+}
+
+// 画像
+.counseling-elements >img{
+  width: 100%;
+}
+
+// 詳細を見るボタン
+.bt-more-senior-life{
+  display: block;
+  text-align: center;
+  background-color: #9B1B30;
+  color: #D4D4D4;
+  border-radius: 10px;
+  padding: 20px 35px;
+  margin: 35px auto;
+}
+// service-senior-life.htmlここまで
+
+
+// service-senior-life-01.html（シニアの住まい相談室）ここから
+// トップ画像（共通）
+.counseling-photo{
+  width: 100%;
+  margin-top: 50px;
+}
+
+// 画像・〇〇に関するお悩み（共通）
+// PC用
+.worries-elements{
+  width: 100%;
+  margin-top: 50px;
+
+  // スマホレイアウトのときには非表示にする
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+// スマホ用
+.worries-elements-sp{
+  display: none;
+
+  @media screen and (max-width: 768px){
+    display: block;
+    width: 100%;
+    margin-top: 50px;  
+  }
+}
+
+// オンラインで全国対応・全体レイアウト
+.nationwide-support{
+  display: flex;
+  margin-top: 50px;
+
+  // スマホレイアウトのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;
+  }
+}
+
+.nationwide-support-left{
+  width: 50%;
+  margin-right: 5%;
+
+  // スマホレイアウト
+  @media screen and (max-width: 768px){
+    width: 100%;
+  }
+}
+
+.nationwide-support-right{
+  width: 50%;
+
+  // スマホレイアウト
+  @media screen and (max-width: 768px){
+    width: 100%;
+    margin-top: 35px;
+  }  
+}
+
+// ご相談は無料です
+.for-free-01{
+  background-color: #CDEDE4;
+  text-align: center;
+  border-radius: 10px;
+  padding: 50px;
+
+  // スマホレイアウト
+  @media screen and (max-width: 768px){
+    padding: 30px;
+  }
+}
+
+// おすすめの専門家
+// PC用
+.expert-profile{
+  column-gap: 10%;
+}
+// スマホ用
+.recommend-expert-sp{
+  margin-top: 50px;
+  margin-left: 25%;
+}
+// service-senior-life-01.html（シニアの住まい相談室）ここまで
+
+
+// service-senior-life-02.html（シニアの年金相談室）ここから
+// ご相談は無料です
+.for-free-02{
+  background-color: #D4E8C4;
+  text-align: center;
+  border-radius: 10px;
+  padding: 50px;
+
+}
+// service-senior-life-02.html（シニアの年金相談室）ここまで
+
+
+// service-senior-life-03.html（シニアの終活相談室）ここから
+.for-free-03{
+  background-color: #FBC79A;
+  text-align: center;
+  border-radius: 10px;
+  padding: 50px;  
+}
+// service-senior-life-03.html（シニアの終活相談室）ここまで
+
+
+// service-care-taxi.html（ケアサポート753）ここから
+.care-taxi-top-section{
+  padding-top: 70px;
+}
+
+.care-taxi-top{
+  width: 100%;
+}
+
+// 介護タクシーの利用をご検討の方へここから
+// 全体レイアウト
+.features-elements{
+  display: flex;
+  padding-top: 100px;
+
+  // スマホレイアウトのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;    
+  }
+}
+
+.features-text{
+  width: 50%;
+
+  @media screen and (max-width: 768px){
+    width: 100%;    
+  }
+}
+
+.features-info{
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.features-photo-01{
+  margin-left: 5%;
+
+  // スマホレイアウトのときには非表示にする
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+.features-photo-01-sp{
+  display: none;
+
+  @media screen and (max-width: 768px){
+    display: block;
+    width: 100%;
+  }
+}
+
+.features-photo-02{
+  margin-right: 5%;
+
+  // スマホレイアウトのときには非表示にする
+  @media screen and (max-width: 768px){
+    display: none;
+  }  
+}
+
+.features-photo-02-sp{
+  display: none;
+
+  @media screen and (max-width: 768px){
+    display: block;
+    width: 100%;
+  }
+}
+
+// 詳細を見るボタン
+.bt-more-care-taxi{
+  display: block;
+  text-align: center;
+  background-color: #9B1B30;
+  color: #D4D4D4;
+  border-radius: 10px;
+  padding: 20px 35px;
+  margin: 35px auto;
+}
+// 介護タクシーの利用をご検討の方へここまで
+
+// 生活サポート・旅行支援ここから
+// 全体レイアウト
+.support-elements{
+  display: flex;
+  margin-top: 50px;
+  column-gap: 5%;
+
+  // スマホスタイルのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;
+  }
+}
+
+.support-contents>img{
+  @media screen and (max-width: 768px){
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+.support-title{
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+// 生活サポート・旅行支援ここまで
+
+// 民間救急として地域医療をサポート
+.private-emergency{
+  margin-top: 50px;
+  width: 100%;
+
+  // スマホスタイルのときには非表示にする
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+.private-emergency-sp{
+  display: none;
+
+  @media screen and (max-width: 768px){
+    display: block;
+    margin-top: 50px;
+    width: 100%;  
+  }
+}
+// service-care-taxi.html（ケアサポート753）ここまで
+
+
+// service-care-taxi-01.htmlここから
+.care-taxi-photo{
+  width: 100%;
+  margin-top: 75px;
+}
+
+#taxi-table{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.taxi-photo-elements{
+  display: flex;
+  justify-content: space-between;
+
+  // スマホスタイルのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;
+    >img{
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.equipment-elements{
+  display: flex;
+  justify-content: space-between;
+
+  // スマホスタイルのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;
+    >img{
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+// 利用料金はこちらボタン
+.bt-more-price{
+  text-align: center;
+  >button{
+    background-color: #9B1B30;
+    color: #D4D4D4;
+    padding: 20px 35px;
+    border-radius: 10px;
+    margin: 50px auto;
+   } 
+}
+// service-care-taxi-01.htmlここまで
+
+
+// service-care-taxi-02.htmlここから
+.price-table{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.assistance-elements{
+  display: flex;
+  justify-content: space-between;
+
+  // スマホスタイルのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;    
+  }
+ 
+  >img{
+    width: 45%;
+    @media screen and (max-width: 768px){
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+// よくあるご質問はこちらボタン
+.bt-more-faq{
+  text-align: center;
+  >button{
+    background-color: #9B1B30;
+    color: #D4D4D4;
+    padding: 20px 35px;
+    border-radius: 10px;
+    margin: 50px auto;
+   } 
+}
+// service-care-taxi-02.htmlここまで
+
+
+// service-care-taxi-03.htmlここから
+.faq-photo{
+  width: 100%;
+  margin-top: 75px;
+
+  // スマホスタイルのときには非表示にする
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+.faq-photo-sp{
+  display: none;
+
+  @media screen and (max-width: 768px){
+    display: block;
+    width: 100%;
+    margin-top: 75px;
+  }
+}
+// service-care-taxi-03.htmlここまで
+
+
+// about.htmlここから
+.photo-and-text{
+  display: flex;
+  column-gap: 2%;
+  margin-top: 50px;
+
+  // スマホレイアウトのときには縦並びにする
+  @media screen and (max-width: 768px){
+    display: block;
+    
+  }
+}
+
+.face-photo{
+  display: block;
+  width: 40%;
+  height: auto;
+  margin-top: 35px;
+
+  // スマホレイアウト
+  @media screen and (max-width: 768px){
+    margin-bottom: 35px;
+    margin-left: 25%;
+  }
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+.business-are-text{
+  margin-top: 50px;
+}
+// about.htmlここまで
+
+
+// contact.htmlここから
+.important-text{
+  background-color: #CDEDE4;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 35px;
+}
+
+// 必須
+.contact-span{
+  background-color: #9B1B30;
+  color: #D4D4D4;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.contact-textbox{
+  width: 100%;
+  height: 50px;
+  border-color: #333333;
+  border-width: 1px;
+  border-style: solid;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-textarea{
+  border-color: #333333;
+  border-width: 1px;
+  border-style: solid;
+}
+// contact.htmlここまで
