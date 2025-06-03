@@ -16,7 +16,7 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 32px;
   color: #333333;
 }
 @media screen and (max-width: 768px) {
@@ -26,13 +26,13 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.6;
   color: #333333;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.6;
   color: #333333;
 }
@@ -48,8 +48,7 @@ header {
   justify-content: space-between;
   background-color: #7F4F2A;
   color: #D4D4D4;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
+  padding: 10px 1.5%;
 }
 @media screen and (max-width: 768px) {
   header {
@@ -79,11 +78,15 @@ header {
   list-style: none;
   padding-top: 25px;
   margin: 0;
+  font-size: 24px;
 }
 @media screen and (max-width: 768px) {
   .nav-pc ul {
     display: none;
   }
+}
+.nav-pc ul > li > a:hover {
+  text-decoration: underline;
 }
 
 #nav-sp {
@@ -155,6 +158,9 @@ header {
   position: absolute;
   top: 500px;
   left: 355px;
+  margin-left: 5%;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 @media screen and (max-width: 768px) {
   .title {
@@ -170,11 +176,13 @@ header {
   height: auto;
 }
 
+.direction {
+  margin-top: 20px;
+}
+
 .blog-section {
   background-color: #CDEDE4;
-  margin-top: 115px;
-  margin-left: 15.7%;
-  margin-right: 15.7%;
+  margin: 115px 15.7%;
   padding: 20px 1.5%;
   margin-left: 4.7%;
   margin-right: 4.7%;
@@ -215,7 +223,7 @@ header {
 .category-name {
   background-color: #DD7600;
   color: #D4D4D4;
-  padding: 5px;
+  padding: 7px;
   margin-left: 20px;
 }
 
@@ -417,6 +425,7 @@ header {
 }
 
 .tableheader {
+  font-size: 24px;
   border-bottom-color: rgba(51, 51, 51, 0.5);
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -432,6 +441,7 @@ header {
 }
 
 .cell {
+  font-size: 24px;
   border-bottom-color: rgba(51, 51, 51, 0.5);
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -536,6 +546,15 @@ footer {
   }
 }
 
+.breadcrumbs {
+  display: flex;
+  padding-top: 20px;
+  font-size: 20px;
+}
+.breadcrumbs > a:hover {
+  text-decoration: underline;
+}
+
 .big-title {
   margin-top: 50px;
 }
@@ -570,8 +589,6 @@ footer {
 .photo-and-explanation {
   display: flex;
   padding-top: 35px;
-  padding-left: 10%;
-  padding-right: 10%;
 }
 @media screen and (max-width: 768px) {
   .photo-and-explanation {
@@ -579,8 +596,9 @@ footer {
   }
 }
 .photo-and-explanation > img {
-  height: 100px;
   margin-right: 65px;
+  width: 15%;
+  height: auto;
 }
 @media screen and (max-width: 768px) {
   .photo-and-explanation > img {
@@ -751,8 +769,13 @@ footer {
 }
 
 .recommend-expert-sp {
-  margin-top: 50px;
-  margin-left: 25%;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .recommend-expert-sp {
+    margin-top: 50px;
+    margin-left: 25%;
+  }
 }
 
 .for-free-02 {
@@ -769,8 +792,10 @@ footer {
   padding: 50px;
 }
 
-.care-taxi-top-section {
-  padding-top: 70px;
+@media screen and (max-width: 768px) {
+  .care-taxi-top-section {
+    padding-top: 70px;
+  }
 }
 
 .care-taxi-top {
@@ -969,6 +994,14 @@ footer {
   }
 }
 
+.video-wrapper {
+  text-align: center;
+}
+
+.video-care-taxi {
+  display: inline-block;
+}
+
 .bt-more-faq {
   text-align: center;
 }
@@ -977,7 +1010,7 @@ footer {
   color: #D4D4D4;
   padding: 20px 35px;
   border-radius: 10px;
-  margin: 50px auto;
+  margin: 100px auto;
 }
 
 .faq-photo {
@@ -1032,6 +1065,16 @@ footer {
 
 .business-are-text {
   margin-top: 50px;
+}
+
+.bt-add {
+  display: block;
+  margin: 35px auto;
+}
+
+.contact-flow {
+  display: block;
+  margin: 35px auto;
 }
 
 .important-text {
